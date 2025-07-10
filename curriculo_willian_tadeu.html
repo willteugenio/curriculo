@@ -1,0 +1,242 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Willian Tadeu | Currículo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --bg: #f4f4f4;
+      --text: #222;
+      --primary: #1e1e2f;
+      --accent: #4b7bec;
+      --font: 'Inter', sans-serif;
+    }
+
+    [data-theme='dark'] {
+      --bg: #1e1e2f;
+      --text: #f4f4f4;
+    }
+
+    body {
+      margin: 0;
+      font-family: var(--font);
+      background-color: var(--bg);
+      color: var(--text);
+      transition: background 0.3s, color 0.3s;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: var(--primary);
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    header p {
+      margin: 8px 0 0;
+      font-size: 1.1rem;
+    }
+
+    .theme-toggle {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: var(--accent);
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .tabs {
+      display: flex;
+      justify-content: center;
+      background-color: #ddd;
+      flex-wrap: wrap;
+    }
+
+    .tabs button {
+      padding: 14px 20px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-weight: 600;
+      font-family: var(--font);
+      transition: 0.3s;
+    }
+
+    .tabs button.active {
+      background-color: var(--accent);
+      color: white;
+    }
+
+    section {
+      max-width: 900px;
+      margin: auto;
+      padding: 30px 20px;
+      display: none;
+    }
+
+    section.active { display: block; }
+
+    h2 {
+      margin-top: 0;
+      font-size: 1.6rem;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 4px;
+    }
+
+    h3 {
+      margin-top: 30px;
+      font-size: 1.2rem;
+      color: var(--accent);
+    }
+
+    ul { list-style: none; padding: 0; }
+    li { margin: 10px 0; }
+
+    .stack-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    footer {
+      background-color: var(--primary);
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9rem;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body data-theme="light">
+
+<button class="theme-toggle" onclick="toggleTheme()">🌙 Modo</button>
+
+<header>
+  <h1>Willian Tadeu</h1>
+  <p>Especialista em Integração de Dados, Automação e Infraestrutura</p>
+  <p>Dev Full Stack com foco em Performance, Escalabilidade e Observabilidade</p>
+</header>
+
+<div class="tabs">
+  <button class="tab active" onclick="showTab('perfil')">Perfil</button>
+  <button class="tab" onclick="showTab('experiencia')">Experiência</button>
+  <button class="tab" onclick="showTab('cases')">Projetos/Conquistas</button>
+  <button class="tab" onclick="showTab('stacks')">Stacks & Ferramentas</button>
+  <button class="tab" onclick="showTab('contato')">Contato</button>
+</div>
+
+<section id="perfil" class="active">
+  <h2>Resumo Profissional</h2>
+  <p>Formado em Sistemas de Informação, com experiência em conciliação financeira, SRE, desenvolvimento full stack e DevOps. Trabalhou com infraestrutura em nuvem (AWS, Oracle), automações, monitoramento, performance e soluções distribuídas. Busca desafios que exigem adaptabilidade, autonomia e pensamento estratégico.</p>
+</section>
+
+<section id="experiencia">
+  <h2>Experiência Profissional</h2>
+  <ul>
+    <li><strong>Finly Tech</strong> – Desenvolvedor Full Stack (Ago/24 - atual)</li>
+    <li><strong>GaussFleet</strong> – Analista de Negócios (Jul/24 - Ago/24)</li>
+    <li><strong>MinasVerde | John Deere</strong> – Full Stack Pleno (Jun/24 - Jul/24)</li>
+    <li><strong>Equals</strong> – Analista Opstech / DevOps / SRE (Mar/21 - Abr/24)</li>
+    <li><strong>Unimed Lavras</strong> – Técnico em Informática (2019-2020)</li>
+  </ul>
+</section>
+
+<section id="cases">
+  <h2>Projetos e Conquistas</h2>
+  <ul>
+    <li>🚀 Redução do tempo de processamento de adquirentes para 14min com automações (Python, Bash, Node.js) e balanceamento entre microsserviços.</li>
+    <li>📊 Criação de relatórios automatizados para clientes em Python, integrados ao fluxo de operações.</li>
+    <li>📂 Extração otimizada de PDFs com 10k+ registros em servidores com apenas 8GB RAM, utilizando escrita em disco.</li>
+    <li>🔁 Microsserviços de tradução, conciliação de cancelamentos e cancelamentos parciais.</li>
+    <li>🔍 Atuação em code review de projetos com .NET (C#), Flutter e outras stacks.</li>
+  </ul>
+</section>
+
+<section id="stacks">
+  <h2>Stacks Técnicas</h2>
+  <div class="stack-grid">
+    <div>Python – 4.5 anos</div>
+    <div>React – ~1 ano</div>
+    <div>Node.js – ~1 ano</div>
+    <div>Java – ~1 ano</div>
+    <div>Go – ~1 ano</div>
+  </div>
+
+  <h3>Automação & DevOps</h3>
+  <ul>
+    <li>Bash Shell, Ansible, Terraform</li>
+    <li>Docker, Docker Compose, GitLab CI/CD</li>
+  </ul>
+
+  <h3>Monitoramento e Alertas</h3>
+  <ul>
+    <li>Prometheus, Grafana, Datadog</li>
+    <li>PagerDuty, Graylog, Zabbix, CloudWatch</li>
+  </ul>
+
+  <h3>Análise de Dados</h3>
+  <ul>
+    <li>Power BI, Metabase</li>
+  </ul>
+
+  <h3>Gestão de Projetos</h3>
+  <ul>
+    <li>Jira, Confluence</li>
+  </ul>
+
+  <h3>Cloud & Serviços</h3>
+  <ul>
+    <li>AWS, Oracle Cloud, GCP, Azure</li>
+  </ul>
+</section>
+
+<section id="contato">
+  <h2>Contato</h2>
+  <p><i class="fa-solid fa-envelope"></i> Email: <a href="mailto:wilteugenio@gmail.com">wilteugenio@gmail.com</a></p>
+  <p><i class="fa-brands fa-linkedin"></i> LinkedIn: <a href="https://linkedin.com/in/willian-eugenio-b75ba11a4">/willian-eugenio</a></p>
+</section>
+
+<footer>
+  <p>© 2025 Willian Tadeu • Desenvolvido com HTML, CSS e 💻</p>
+</footer>
+
+<script>
+  function showTab(id) {
+    document.querySelectorAll('section').forEach(s => s.classList.remove('active'));
+    document.querySelectorAll('.tab').forEach(b => b.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    event.target.classList.add('active');
+  }
+
+  function toggleTheme() {
+    const body = document.body;
+    const current = body.getAttribute("data-theme");
+    body.setAttribute("data-theme", current === "light" ? "dark" : "light");
+  }
+</script>
+
+</body>
+</html>
